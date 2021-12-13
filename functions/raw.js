@@ -1,10 +1,11 @@
 export async function onRequest({ request }) {
   const resp = {
     ip: request.headers.get('CF-Connecting-IP'),
-    asn: Number(request.cf.asn),
+    asn: request.cf.asn,
+    asOrg: request.cf.asOrganization,
     coordinates: {
-      latitude: Number(request.cf.latitude),
-      longitude: Number(request.cf.longitude)
+      latitude: request.cf.latitude,
+      longitude: request.cf.longitude
     }
   }
 
