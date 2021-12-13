@@ -3,10 +3,7 @@ export async function onRequest({ request }) {
     ip: request.headers.get('CF-Connecting-IP'),
     asn: request.cf.asn,
     asOrg: request.cf.asOrganization,
-    coordinates: {
-      latitude: request.cf.latitude,
-      longitude: request.cf.longitude
-    }
+    location: `${request.cf.city}, ${request.cf.region}`
   }
 
   return new Response(JSON.stringify(resp, null, 2), {
