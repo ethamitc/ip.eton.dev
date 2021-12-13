@@ -32,6 +32,17 @@ export default function App() {
             <p className="inline-block align-middle mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
               Your IP is registered in <a className="text-gray-400 italic">{data.location}</a>.
             </p>
+            <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+              <div className="rounded-md shadow">
+                <a
+                  href="https://ip.eton.dev/raw"
+                  target={'_blank'}
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-800 md:py-4 md:text-lg md:px-10"
+                >
+                  View raw data
+                </a>
+              </div>
+            </div>
           </div>
         </main>
       </Navbar>
